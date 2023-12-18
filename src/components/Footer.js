@@ -7,11 +7,13 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import RedditIcon from '@mui/icons-material/Reddit';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; 
+import { Navigate, useNavigate } from 'react-router';
 function Footer(){
+  const navigate=useNavigate();
     return(
         <div className="bg-black flex justify-around text-white pt-10 pb-28">
              <div>
-                <img alt="img" src='./assest/pw-skill-logo.jpg' className="w-20 "></img>
+                <img alt="img" src='./assest/logo-3.png ' className="w-20 border-2 border-white"></img>
                 <div className='flex justify-between w-52 mt-10'>
                   <EmailIcon></EmailIcon>
                   <p>triplek2310@gmail.com</p>
@@ -39,7 +41,7 @@ function Footer(){
                         <p className="mt-3">Privacy Policy </p>
                     </div>
                     <div>
-                        <p className="mt-3">Contact Us</p>
+                        <p className="mt-3" onClick={()=>navigate('/Contact')}>Contact Us</p>
                         <p className="mt-3">Job Assurance</p>
                         <p className="mt-3">Terms and Condition</p>
                     </div>
@@ -51,14 +53,14 @@ function Footer(){
                 <div className="rounded-lg bg-orange-500 w-68 h-1 mt-2"></div>
                 <div className="flex gap-20"> 
                     <div className="">
-                        <p className="mt-3">About Us</p>
-                        <p className="mt-3">Faq</p>
-                        <p className="mt-3">Privacy Policy </p>
+                        <p className="mt-3">Courses</p>
+                        <p className="mt-3">Compiler</p>
+                        <p className="mt-3">Job portal </p>
                     </div>
                     <div>
-                        <p className="mt-3">Contact Us</p>
-                        <p className="mt-3">Job Assurance</p>
-                        <p className="mt-3">Terms and Condition</p>
+                        <p className="mt-3">Acadmic Prep.</p>
+                        <p className="mt-3">Notes</p>
+                        <p className="mt-3">Coding Plateform</p>
                     </div>
                </div>
              </div>

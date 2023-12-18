@@ -22,6 +22,7 @@ import Slider from 'react-slick';
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import { Navigate, useNavigate } from 'react-router';
 
 
 const settings = {
@@ -127,7 +128,7 @@ function Explore(){
   
 
   
-
+  const navigate=useNavigate();
   return(
     <div className="">
       <Nav2></Nav2>
@@ -154,12 +155,12 @@ function Explore(){
               </p>
             </div>
             <div className='flex h-12 gap-3 mt-10 '>
-              <dutton style={{backgroundColor: 'rgb(210, 97, 75)'}} className='rounded-md  w-44 pl-12 pt-3'>Enroll now</dutton>
+              <dutton style={{backgroundColor: 'rgb(210, 97, 75)'}} className='rounded-md  w-44 pl-12 pt-3' onClick={()=>navigate("/login")}>Enroll now</dutton>
               <button style={{backgroundColor: 'rgb(255, 219, 211)'}} className='rounded-md  w-44' onClick={handleClickOpen}> Share</button>
             </div>
             <div className='mt-2 font-thin'>* EMI Options Available</div>
         </div>
-         <img alt='course' src='./assest/course-2.jpg' className='rounded-3xl w-3/4 h-3/4 mt-20'></img>
+         <img alt='course' src='/assest/webdev-1.jpg' className='rounded-3xl w-[500px] h-3/4 mt-20'></img>
       </div>
       <div className='bg-gradient-to-b from-white to-[#FFF7F5] '>
        <div style={{boxShadow:"2px 1px 10px 1px rgba(192,192,192,1)"}} className='flex justify-around bg-white m-28 rounded-lg p-8'>
@@ -271,7 +272,7 @@ function Explore(){
              Page Link
            </div>
            <div className='flex ml-8 mt-4 mb-4'>
-              <div className='border-2 rounded-l-md pt-[-1] font-thin'>https://pwskills.com/course/decode...</div>
+              <div className='border-2 rounded-l-md pt-[-1] font-thin'>https://ragsedu.com/course/decode...</div>
               <ContentCopyIcon  className='bg-pink-500  p-1  rounded-r'/>
            </div>
          </div>

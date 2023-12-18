@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import './Navbar.css';
-import Mid from "./mid";
+ import Mid from "./mid";
 // import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from "react-router";
 
@@ -45,14 +45,14 @@ function Navbar(){
             <div className="flex gap-48 ml-12 mt-1">
             <a href="https://www.onlinegdb.com/">Compiler</a>
             <a href="https://www.glassdoor.co.in/Reviews/index.htm?overall_rating_low=3.5&page=1&locId=2891681&locType=C">Job portal</a>
-            <a href="https://practice.geeksforgeeks.org/explore?page=1&sortBy=submissions">Coding Plateform</a>
-            <a href="https://drive.google.com/drive/folders/1-2q7pN0SsWP3i68VNjeUjnfp001EN8pv" className="">Exam Paper</a>
-            <div className="" onClick={()=>navigate("/Contact")}>Contact</div>
+            <a href="https://practice.geeksforgeeks.org/explore?page=1&sortBy=submissions" className="cursor-pointer">Coding Plateform</a>
+            <a href="https://drive.google.com/drive/folders/1-2q7pN0SsWP3i68VNjeUjnfp001EN8pv" className="cursor-pointer">Exam Paper</a>
+            <div className="cursor-pointer" onClick={()=>navigate("/Contact")}>Contact</div>
             </div>
         </div>
-         <Mid/> 
+         
           {/* <div className="line"></div>  */}
-        
+        <Mid/>
     </div>
     );
 }

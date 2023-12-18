@@ -5,7 +5,7 @@ function Contact(){
             <div className="h-20 bg-red-300 relative">
              <img src='./assest/logo-3.png' className="h-12  absolute mt-4 ml-24 rounded-md"></img>
             </div>
-            <div className="font-bold text-xl w-72 ml-[600px] rounded-md mt-5">Reach Out to Rags Edu Team !!</div>
+            <div className="font-bold text-xl w-72 ml-[600px] rounded-md mt-5">Send Your Query to Rags Edu Team !!</div>
             <div className="">
             <form action="https://formspree.io/f/xnqkkgjn" method="post" className="flex flex-col justify-center ml-60 gap-5">
                 <input type="text" placeholder="username" name="username"  required className="w-72 outline-none border-2 border-black ml-[358px] mt-5 p-2"/>

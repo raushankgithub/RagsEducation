@@ -37,7 +37,11 @@ function Card2({ cardinformation2 }) {
             </div>
             <div className="font-thin">{cardinformation2.paragraph}</div>
             <div className='relative'>
-              <button style={buttonStyle} className="bg-black text-white rounded-md w-44 pt-2 pb-2  mr-28 mt-6"> EXPLORE NOW</button>
+              <button style={buttonStyle} className="bg-black text-white rounded-md w-44 pt-2 pb-2  mr-28 mt-6"> 
+              <a href={cardinformation2.href}>
+              EXPLORE NOW
+              </a>
+              </button>
                 <div className=''>
                 <ArrowRightAltTwoToneIcon className='absolute top-8 left-36 text-white '/>
                 </div>

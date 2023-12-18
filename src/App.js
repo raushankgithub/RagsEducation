@@ -12,6 +12,9 @@ import Contact from './AllPage/contact';
 import Update from './AllPage/Update';
 import Courses from './AllPage/Couses';
 import Order from './AllPage/Order';
+import AddToCart from './AllPage/AddToCart';
+import UserDetails from './AllPage/UserDetails';
+import Payment from './AllPage/Payment';
 
 // import { Login, Route, Router,Routes,BrowserRouter } from '@mui/icons-material';
 // <Navbar/>
@@ -28,6 +31,9 @@ function App() {
           <Route path='/Update' element={<Update/>}></Route>
           <Route path='/Courses' element={<Courses/>}></Route>
           <Route path='/Order' element={<Order/>}></Route>
+          <Route path='/AddToCart' element={<AddToCart/>}></Route>
+          <Route path='/UserDetails' element={<UserDetails></UserDetails>}></Route>
+          <Route path='/Payment' element={<Payment></ Payment>}></Route>
         </Routes>
       </BrowserRouter>  
   );

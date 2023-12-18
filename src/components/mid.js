@@ -2,6 +2,7 @@ import React,{useEffect, useState}from "react";
 import Typed from "typed.js";
  import CardList  from "./Icard/CardList";
  import CardListSelect from "./CardListSelect";
+ import { useNavigate } from "react-router";
 
 //  import Footer from "./Footer";
 
@@ -126,7 +127,7 @@ import Slider from 'react-slick';
           },
           {
             courseno:5,
-            image:"./assest/dbms-1.jpg",
+            image:"./assest/os-3.jpg",
             videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
             language:"english",
             heading:"Os placement series",
@@ -143,25 +144,82 @@ import Slider from 'react-slick';
             buttoncontent2:"Enroll Now",
             videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
           },
-          {
-            courseno:6,
-            image:"./assest/dbms-1.jpg",
-            videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
-            language:"english",
-            heading:"Computer Network",
-            educatorP1:"Neso Academy ",
-            educatorP2:"and 3 more",
-            date:"Starts on 7 oct 2023",
-            detailsP1:"carrer guidance | job assurance",
-            detailsP2:"& More",
-            working:"college student & working professional",
-            price:"Rs. 20000.00",
-            offprcie:"40000.00",
-            discount:"50 %",
-            buttoncontent1:"Explore",
-            buttoncontent2:"Enroll Now",
-            videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
-          }
+        //   {
+        //     courseno:6,
+        //     image:"./assest/dbms-1.jpg",
+        //     videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
+        //     language:"english",
+        //     heading:"Computer Network",
+        //     educatorP1:"Neso Academy ",
+        //     educatorP2:"and 3 more",
+        //     date:"Starts on 7 oct 2023",
+        //     detailsP1:"carrer guidance | job assurance",
+        //     detailsP2:"& More",
+        //     working:"college student & working professional",
+        //     price:"Rs. 20000.00",
+        //     offprcie:"40000.00",
+        //     discount:"50 %",
+        //     buttoncontent1:"Explore",
+        //     buttoncontent2:"Enroll Now",
+        //     videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
+        //   },
+        //   {
+        //     courseno:4,
+        //     image:"./assest/dbms-1.jpg",
+        //     videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
+        //     language:"english",
+        //     heading:"Dbms placement series",
+        //     educatorP1:"love babar ",
+        //     educatorP2:"and 3 more",
+        //     date:"22 videos",
+        //     detailsP1:"carrer guidance | job assurance",
+        //     detailsP2:"& More",
+        //     working:"college student & working professional",
+        //     price:"Rs. 20000.00",
+        //     offprcie:"40000.00",
+        //     discount:"50 %",
+        //     buttoncontent1:"Explore",
+        //     buttoncontent2:"Enroll Now",
+        //     videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
+        //   },
+        //   {
+        //     courseno:5,
+        //     image:"./assest/dbms-1.jpg",
+        //     videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
+        //     language:"english",
+        //     heading:"Os placement series",
+        //     educatorP1:"Love Babbar ",
+        //     educatorP2:"and 3 more",
+        //     date:"Starts on 7 oct 2023",
+        //     detailsP1:"carrer guidance | job assurance",
+        //     detailsP2:"& More",
+        //     working:"college student & working professional",
+        //     price:"Rs. 20000.00",
+        //     offprcie:"40000.00",
+        //     discount:"50 %",
+        //     buttoncontent1:"Explore",
+        //     buttoncontent2:"Enroll Now",
+        //     videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
+        //   },
+        //   {
+        //     courseno:6,
+        //     image:"./assest/dbms-1.jpg",
+        //     videolink1:"https://www.youtube.com/embed/ZRS485LxX0s",
+        //     language:"english",
+        //     heading:"Computer Network",
+        //     educatorP1:"Neso Academy ",
+        //     educatorP2:"and 3 more",
+        //     date:"Starts on 7 oct 2023",
+        //     detailsP1:"carrer guidance | job assurance",
+        //     detailsP2:"& More",
+        //     working:"college student & working professional",
+        //     price:"Rs. 20000.00",
+        //     offprcie:"40000.00",
+        //     discount:"50 %",
+        //     buttoncontent1:"Explore",
+        //     buttoncontent2:"Enroll Now",
+        //     videolink:"https://www.youtube.com/embed/igGtZWTm0O4"
+        //   }
        ]
 
     //for lastcard:-
@@ -170,23 +228,27 @@ import Slider from 'react-slick';
            id:1,
            link:"./assest/products-icon1.png",
            paragraph:"Buying a new PC is no longer required, Access unlimited computing power!",
-           heading:"PW Skills Lab",
-           color:"pink"
+           heading:"Rags lab",
+           color:"pink",
+           href:'https://www.onlinegdb.com/'
         },
         {
             id:2,
             link:"./assest/products-icon2.png",
             paragraph:"Self-paced portal prioritizes hands-on training with 570+ internship projects.",
             heading:"Experience Portal",
-            color:"red"
+            color:"red",
+            href:'https://www.glassdoor.co.in/Reviews/index.htm?overall_rating_low=3.5&page=1&locId=2891681&locType=C',
         },
         {
             id:3,
             link:"./assest/products-icon3.png",
             paragraph:"Our student placements and 100K+ career transitions speak volumes",
             heading:"Hall Of Fame",
-            color:"lightblue"
+            color:"lightblue",
+            href:''
         },
+        
        
     ]
     const Lcard2=[
@@ -195,7 +257,8 @@ import Slider from 'react-slick';
             link:"./assest/products-icon4.png",
             paragraph:"Use exceptional templates for a stand-out resume minus the sign up process.",
             heading:"Job Portal",
-            color:"yellow"
+            color:"yellow",
+            href:'https://www.glassdoor.co.in/Reviews/index.htm?overall_rating_low=3.5&page=1&locId=2891681&locType=C',
         },
         {
             id:5,
@@ -252,7 +315,7 @@ function Mid() {
     //     setcolor("white");
     //     setbgcolor("white");
     // }
-
+    const navigate=useNavigate();
     useEffect(() => {
         
         const options = {
@@ -307,7 +370,7 @@ function Mid() {
                     <div className="l2">Join us on a journey of discovery, where knowledge is limitless, and education is for everyone.</div>
                     <div className="l3">Explore, learn, and thrive with Rags Education!</div>
                 </div>
-                <button className="bottom-button">EXPLORE CORSES</button>
+                <button className="bottom-button" onClick={()=>navigate('/Explore')}>EXPLORE COURSES</button>
             </div>
             <img src="./assest/pw-image.png" alt="midimage" className="left" />
         </div>
