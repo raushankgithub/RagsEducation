@@ -34,12 +34,14 @@ errors
       console.log('Submitting form');
       const{ username, password } = values
       console.log('Form values:', values);
-      const result =await dispatch(login(values))
+      const result =await dispatch(login(values));
       console.log(result);
-      if(result){
-        console.log("logined");
-      }
+      // if(result){
+      //   console.log("logined");
+      // }
       //
+      alert(result);
+      /*
       if(result?.data?.status === "SUCCESS"){
         
         alert(result?.data?.message);
@@ -49,6 +51,7 @@ errors
       else{
         alert(result?.data?.message)
       }
+      */
       //
 
       console.log(values)

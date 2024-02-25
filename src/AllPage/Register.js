@@ -29,20 +29,26 @@ const dispatch = useDispatch();
      validationSchema: signUpSchema,
     onSubmit: async(values,action) => {
       console.log('hello')
-      const{name,email,password} = values
-      let result = await dispatch(register(values))
-      console.log(result)
+      const{name,email,password} = values;
+      //await
+      let result = await dispatch(register(values));
+      console.log(result);
+      alert(result);
+      // console.log(result?.data?.status);
+      /*
       if(result?.data?.status === "SUCCESS"){
-        setValues(initialValues)
+        setValues(initialValues);
         alert(result?.data?.message);
         alert('register sucessfull welocme in rags edu');
         // alert(message);
-        navigate("/Login")
+        navigate("/Login");
       }else{
         console.log(result);
         //alert(result?.message)
-        alert(result?.status);
+        // alert(result?.status);
+        alert(result);
       }
+      */
       console.log("After reset:", values);
     }
     

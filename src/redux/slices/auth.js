@@ -70,12 +70,15 @@ export const deleteUser = (id)=> async (dispatch) =>{
 
 export const register = (data)=> async (dispatch) =>{
     try{
-    const result = await authApi.register(data);
-    if(result)
-        return result
+      const result = await authApi.register(data);
+      return result;
+    //   console(result);  
+    //   if(result){ 
+    //     return result;
+    //   }
     }
     catch(error){
-
+        // console.log()
     }
     
 }
@@ -83,12 +86,16 @@ export const login = (data) => async (dispatch) =>{
     try{
         const result = await authApi.login(data);
         console.log("slice result",result);
-        if(result)
+        if(result){
             return result;
-        return false
+        }    
+        else{
+            return false;
+        }
+       
     }
     catch(error){
-
+          console('error occured');
     }
     
 }

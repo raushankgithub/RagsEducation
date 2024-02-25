@@ -60,18 +60,20 @@ class AuthApi{
  
    async register(data){
   
-     try {
-      const response = await axios.post(`${process.env.REACT_APP_HOST}/userapp/auth/register`,data);
-      console.log(response);
-    if(response.data.status==='SUCCESS')
-    return response;
-    else
-     return false;
-       
+    try{
+        const response = await axios.post(`${process.env.REACT_APP_HOST}/userapp/auth/register`,data);
+        console.log(response.data);
+        if(response.data.status==='SUCCESS'){
+          console.log(response.data.message);
+          return response.data.message;
+        }
+        else{
+          return false;
+        }   
     } catch (error) {
-      console.log(error);
-      console.log(error?.response?.data);
-      return error?.response?.data
+      // console.log(error);
+      console.log(error?.response?.data?.message);
+      return error?.response?.data?.message;
     }
    } 
 
@@ -81,11 +83,15 @@ class AuthApi{
       console.log("response",response);
       if(response.data.status==='SUCCESS')
       return response;
-      else
-       return false;
+      else{
+      //  return false;
+      console.log('user not exist');
+      return response?.data?.message;
+      }
     }
     catch(error){
-         console.log(error)
+         console.log(error?.response?.data?.message);
+         return error?.response?.data?.message;
     }
    } 
 
